@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "API feita em nodeJS utilizando express e ORM sequelize para conexão com banco de dados mySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "sequelize",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser":"1.19.0",
+    "cors":"2.8.5",
+    "express":"4.17.1",
+    "mysql2":"2.0.2",
+    "sequelize":"5.21.2"
+  }
+}
