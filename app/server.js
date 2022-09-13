@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-var corsOptions = {
+let corsOptions = {
     origin: "http://localhost:8081"
 };
 
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-const db = require("./app/models");
+const db = require("./models")
 
 db.sequelize.sync();
 
@@ -22,7 +22,7 @@ app.get("/",(req,res) => {
     res.json({ message: "Welcome to API-TUTORIAL application"});
 });
 
-require("./app/routes/tutorial.routes")(app);
+require("./routes/tutorial.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT,() => {
